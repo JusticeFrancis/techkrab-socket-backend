@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <%= roomName %>
+    </div>
+
+
+    <div id="messageArea"></div>
+    
+
+    <div>
+        <input id="message" />
+        <input id="file" type="file"/>
+    </div>
+
+    <div>
+       <button onClick="sendMessage(document.getElementById('message').value)" >hey</button>
+       <button onClick="sendFile(document.getElementById('file').files[0])" >send file</button>
+    </div>
+
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+</body>
+</html>
